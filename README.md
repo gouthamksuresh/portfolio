@@ -139,9 +139,7 @@ Built as a fully-dynamic, CMS-driven single-page app with a JSON-backed admin pa
 ├── index.html                  # Static head: title, meta, JSON-LD, fonts
 ├── public/
 │   ├── robots.txt
-│   ├── sitemap.xml
-│   ├── favicon.ico
-│   └── placeholder.svg
+│   └── sitemap.xml
 ├── src/
 │   ├── main.tsx                # React entry, QueryClient + Router providers
 │   ├── App.tsx                 # Route table
