@@ -70,7 +70,17 @@ export default function Recommendations() {
           sort_order: 1002,
         };
 
-        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation, dhanRecommendation]);
+        const csbEdgeRecommendation: Recommendation = {
+          id: "csb-edge-referral-manual",
+          title: "Edge+ CSB Bank RuPay Credit Card",
+          description: "I’m using the Edge+ CSB Bank RuPay Credit Card - it’s lifetime free & pretty rewarding (up to ₹7L limit). Get 50% Jewels on shopping, 25% on Flights, and 5% on UPI spends. 🎁 Welcome Offer: FREE 1-year Amazon Prime Lite, Fraud Protect, and ₹0 joining/annual fee. Use code: rITjnd",
+          url: "http://jptr.onelink.me/TOMp/188942f50c",
+          category: "Banking",
+          icon: "https://www.google.com/s2/favicons?domain=jupiter.money&sz=128",
+          sort_order: 1003,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation, dhanRecommendation, csbEdgeRecommendation]);
         setLoading(false);
       });
   }, []);
