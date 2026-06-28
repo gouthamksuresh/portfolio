@@ -40,7 +40,17 @@ export default function Recommendations() {
           sort_order: 999,
         };
 
-        setItems([...fetchedItems, zerodhaRecommendation]);
+        const growwRecommendation: Recommendation = {
+          id: "groww-referral-manual",
+          title: "Groww",
+          description: "Hey! Ready to start your investment journey? I use Groww for all my investing and trading needs. You can open a free demat account today using my referral code : NUI6SY",
+          url: "https://app.groww.in/v3cO/dl6ugxk2",
+          category: "Finance",
+          icon: "https://www.google.com/s2/favicons?domain=groww.in&sz=128",
+          sort_order: 1000,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation]);
         setLoading(false);
       });
   }, []);
