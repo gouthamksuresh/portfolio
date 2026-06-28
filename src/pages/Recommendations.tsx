@@ -80,7 +80,17 @@ export default function Recommendations() {
           sort_order: 1003,
         };
 
-        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation, dhanRecommendation, csbEdgeRecommendation]);
+        const sliceRecommendation: Recommendation = {
+          id: "slice-referral-manual",
+          title: "Slice UPI Credit Card",
+          description: "I use slice UPI credit card for all my scan & pay transactions. Earning cashback on every payment while my savings stay untouched. Try it with my code &GOUTH52599, get ₹500 on your first payment.",
+          url: "https://slice.bank.in/t?c=k8jvKn2&ic=GOUTH52599",
+          category: "Banking",
+          icon: "https://www.google.com/s2/favicons?domain=sliceit.com&sz=128",
+          sort_order: 1004,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation, dhanRecommendation, csbEdgeRecommendation, sliceRecommendation]);
         setLoading(false);
       });
   }, []);
