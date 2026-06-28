@@ -5,7 +5,7 @@ import { useEffect } from "react";
  * Supports staggered reveals via inline `transition-delay` styles.
  * Mount once at the app root.
  */
-export function useReveal() {
+export function useReveal(deps: any[] = []) {
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -25,5 +25,5 @@ export function useReveal() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, deps);
 }

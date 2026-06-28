@@ -18,9 +18,9 @@ interface Recommendation {
 }
 
 export default function Recommendations() {
-  useReveal();
   const [items, setItems] = useState<Recommendation[]>([]);
   const [loading, setLoading] = useState(true);
+  useReveal([items]);
 
   useEffect(() => {
     supabase
