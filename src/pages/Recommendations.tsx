@@ -36,7 +36,7 @@ export default function Recommendations() {
           description: "Open a free demat account with Zerodha and start investing in stocks, derivatives, mutual funds, ETFs, bonds, IPOs, and more.",
           url: "https://zerodha.com/open-account?c=VYG476",
           category: "Finance",
-          icon: "TrendingUp",
+          icon: "https://logo.clearbit.com/zerodha.com",
           sort_order: 999,
         };
 
@@ -104,9 +104,18 @@ export default function Recommendations() {
                           className="group rounded-lg border border-border bg-card p-5 hover:border-primary/60 transition-colors glow-hover flex flex-col"
                         >
                           <div className="flex items-start justify-between gap-3 mb-2">
-                            <h3 className="font-bold text-base group-hover:text-primary transition-colors">
-                              {item.title}
-                            </h3>
+                            <div className="flex items-center gap-3">
+                              {item.icon && (item.icon.startsWith("http") || item.icon.startsWith("/")) && (
+                                <img 
+                                  src={item.icon} 
+                                  alt={item.title} 
+                                  className="w-5 h-5 rounded-sm object-contain" 
+                                />
+                              )}
+                              <h3 className="font-bold text-base group-hover:text-primary transition-colors">
+                                {item.title}
+                              </h3>
+                            </div>
                             <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary shrink-0 mt-1 transition-colors" />
                           </div>
                           {item.description && (
