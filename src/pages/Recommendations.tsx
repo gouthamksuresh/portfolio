@@ -36,7 +36,7 @@ export default function Recommendations() {
           description: "Open a free demat account with Zerodha and start investing in stocks, derivatives, mutual funds, ETFs, bonds, IPOs, and more.",
           url: "https://zerodha.com/open-account?c=VYG476",
           category: "Finance",
-          icon: "https://logo.clearbit.com/zerodha.com",
+          icon: "https://zerodha.com/static/images/favicon.png",
           sort_order: 999,
         };
 
@@ -109,7 +109,7 @@ export default function Recommendations() {
                                 <img 
                                   src={item.icon} 
                                   alt={item.title} 
-                                  className="w-5 h-5 rounded-sm object-contain" 
+                                  className="w-5 h-5 rounded-sm object-contain bg-white/90 p-0.5" 
                                 />
                               )}
                               <h3 className="font-bold text-base group-hover:text-primary transition-colors">
