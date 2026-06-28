@@ -50,7 +50,17 @@ export default function Recommendations() {
           sort_order: 1000,
         };
 
-        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation]);
+        const aliceBlueRecommendation: Recommendation = {
+          id: "aliceblue-referral-manual",
+          title: "AliceBlue",
+          description: "Invest and trade with AliceBlue, India's largest retail stockbroker.",
+          url: "https://ekyc.aliceblueonline.com/?source=2661247",
+          category: "Finance",
+          icon: "https://www.google.com/s2/favicons?domain=aliceblueonline.com&sz=128",
+          sort_order: 1001,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation]);
         setLoading(false);
       });
   }, []);
