@@ -28,7 +28,19 @@ export default function Recommendations() {
       .select("*")
       .order("sort_order", { ascending: true })
       .then(({ data }) => {
-        setItems(data ?? []);
+        const fetchedItems = data ?? [];
+        
+        const zerodhaRecommendation: Recommendation = {
+          id: "zerodha-referral-manual",
+          title: "Zerodha",
+          description: "Open a free demat account with Zerodha and start investing in stocks, derivatives, mutual funds, ETFs, bonds, IPOs, and more.",
+          url: "https://zerodha.com/open-account?c=VYG476",
+          category: "Finance",
+          icon: "TrendingUp",
+          sort_order: 999,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation]);
         setLoading(false);
       });
   }, []);
