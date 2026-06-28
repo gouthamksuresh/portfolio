@@ -60,7 +60,17 @@ export default function Recommendations() {
           sort_order: 1001,
         };
 
-        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation]);
+        const dhanRecommendation: Recommendation = {
+          id: "dhan-referral-manual",
+          title: "Dhan",
+          description: "I shifted to Dhan and the experience has been smooth so far. Dhan has fast order execution, powerful charts, and solid tools for active traders & investors. 🔥 1 crore MTF funding 🔥 2500 Price Alerts 🔥 Instant Pledge Margin benefit. If you want to try it, use my link to open a free Demat account.",
+          url: "https://join.dhan.co/?invite=EOUNQ26752",
+          category: "Finance",
+          icon: "https://www.google.com/s2/favicons?domain=dhan.co&sz=128",
+          sort_order: 1002,
+        };
+
+        setItems([...fetchedItems, zerodhaRecommendation, growwRecommendation, aliceBlueRecommendation, dhanRecommendation]);
         setLoading(false);
       });
   }, []);
